@@ -3,3 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  ul
+    each message in messages || []
+      li
+        strong User: 
+        | #{message.user}
+        br
+        strong Message: 
+        | #{message.text}
+        br
+        strong Date: 
+        | #{message.date}
