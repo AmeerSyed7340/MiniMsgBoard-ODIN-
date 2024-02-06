@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <ul>
-      <% messages.forEach(function(message) { %>
-        <li><%= message.user %>: <%= message.text %> at <%= message.added.toDateString() %></li>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <ul>
+    <% messages.forEach(function(message) { %>
+      <li>
+        <%= message.user %>: <%= message.text %> at <%= message.added.toDateString() %>
+      </li>
       <% }); %>
-    </ul>
-    
-  </body>
+  </ul>
+  <form method="GET" action="/new">
+    <button type="submit">New</button>
+  </form>
+</body>
+
 </html>
