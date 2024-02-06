@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('express-minimsgboard:server');
+var debug = require('debug')('minimsgboard-odin:server');
 var http = require('http');
 
 /**
