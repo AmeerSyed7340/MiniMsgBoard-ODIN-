@@ -7,5 +7,11 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+      <% messages.forEach(function(message) { %>
+        <li><%= message.user %>: <%= message.text %> at <%= message.added.toDateString() %></li>
+      <% }); %>
+    </ul>
+    
   </body>
 </html>
